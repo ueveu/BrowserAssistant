@@ -14,11 +14,7 @@ export const TriggerMode = {
   manually: 'Manually',
 }
 
-export const ThemeMode = {
-  light: 'Light',
-  dark: 'Dark',
-  auto: 'Auto',
-}
+export const ThemeMode = { light: 'Light', dark: 'Dark', auto: 'Auto', claude: 'Claude' }
 
 export const ModelMode = {
   balanced: 'Balanced',
