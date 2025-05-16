@@ -57,8 +57,58 @@
   --code-background-color: #f7f7f7;
 }
 
+[data-theme='claude'] {
+  @import 'highlight.js/scss/github.scss';
+
+  --font-color: #191919;
+  --toolbar-color: #191919;
+  --hover-toolbar-color: #e6e6e6;
+  --theme-color: #ffffff;
+  --question-bg-color: #f5f5f5;
+  --theme-border-color: #e6e6e6;
+  --dragbar-color: #e6e6e6;
+  --color-neutral-muted: rgba(150, 160, 170, 0.3);
+  --code-background-color: #f8f8f8;
+  --claude-human-bg-color: rgba(73, 119, 255, 0.1);
+  --claude-assistant-bg-color: #ffffff;
+}
+
 .chatgptbox-sidebar-free {
   margin-left: 60px;
+}
+
+/* Claude style for conversation items */
+[data-theme='claude'] {
+  .chatgptbox-question {
+    background-color: var(--claude-human-bg-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+  }
+
+  .chatgptbox-answer {
+    background-color: var(--claude-assistant-bg-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-left: 4px solid #7e57c2;
+  }
+
+  .gpt-header {
+    margin-bottom: 8px;
+
+    p {
+      font-weight: 600;
+    }
+  }
+
+  .markdown-body {
+    font-family: 'Inter', sans-serif;
+
+    p {
+      line-height: 1.6;
+    }
+  }
 }
 
 .chatgptbox-container,
@@ -138,8 +188,9 @@
   }
 
   .markdown-body {
-    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
